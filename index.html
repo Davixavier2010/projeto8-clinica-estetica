@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clínica Lumina • Dermatologia & Estética Médica • Jardins & Faria Lima, SP</title>
+  <meta name="description" content="Clínica médica de alta dermatologia estética. Procedimentos não invasivos, Ultraformer MPT, Laser Lavieen e Botox anatômico com naturalidade e conforto nos Jardins." />
+
+  <!-- Google Fonts: Cormorant Garamond, Plus Jakarta Sans & Space Grotesk -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            rose: {
+              50: '#FFF5F7',
+              100: '#FDE8ED',
+              200: '#F9D0DC',
+              300: '#F3B0C2',
+              DEFAULT: '#D86885',
+              dark: '#8F2B45',
+            },
+            gold: {
+              DEFAULT: '#C5A059',
+              light: '#E8C982',
+              dark: '#8F6E30',
+            },
+            clinical: {
+              bg: '#FCFAF9',
+              card: '#FFFFFF',
+              text: '#23181C',
+              muted: '#6B5B62'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+            mono: ['"Space Grotesk"', 'monospace'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- GSAP Animation Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css" />
+</head>
+<body class="bg-[#FCFAF9] text-[#23181C] antialiased">
+
+  <!-- Ambient Rose Glows -->
+  <div class="ambient-glow-rose -top-20 -left-20"></div>
+  <div class="ambient-glow-rose top-[30%] -right-20"></div>
+  <div class="ambient-glow-gold top-[65%] -left-20"></div>
+
+  <!-- ======================================================================
+       1. FLOATING NAVIGATION (White Porcelain Glassmorphism)
+       ====================================================================== -->
+  <header class="sticky top-3 sm:top-5 z-40 px-3 sm:px-6 transition-all">
+    <div class="max-w-6xl mx-auto rounded-full floating-island-nav px-5 sm:px-7 py-3 flex items-center justify-between">
+      
+      <!-- Monogram Brand Logo -->
+      <a href="#" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-full bg-gradient-to-tr from-[#D86885] to-[#F3B0C2] text-white flex items-center justify-center font-serif text-xl font-bold italic shadow-sm group-hover:scale-105 transition-transform">
+          L
+        </div>
+        <div>
+          <span class="font-serif text-2xl font-bold tracking-tight text-[#23181C] group-hover:text-[#D86885] transition-colors leading-none block">
+            Lumina
+          </span>
+          <span class="text-[9px] uppercase font-mono tracking-widest text-[#8F2B45] block mt-0.5 font-bold">
+            Dermatologia & Estética
+          </span>
+        </div>
+      </a>
+
+      <!-- Center Links & VIP Pill -->
+      <div class="hidden lg:flex items-center gap-7">
+        <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#FFF5F7] border border-[#F9D0DC]">
+          <span class="w-2 h-2 rounded-full bg-[#D86885] animate-ping"></span>
+          <span class="text-[11px] font-mono uppercase tracking-wider text-[#8F2B45] font-bold">Atendimento VIP Aberto</span>
+        </div>
+
+        <nav class="flex items-center gap-6 text-xs font-semibold uppercase tracking-wider text-[#6B5B62]">
+          <a href="#utensilio" class="hover:text-[#D86885] transition-colors">Tecnologia</a>
+          <a href="#diferenciais" class="hover:text-[#D86885] transition-colors">Diferenciais</a>
+          <a href="#procedimentos" class="hover:text-[#D86885] transition-colors">Procedimentos</a>
+          <a href="#simulador" class="hover:text-[#D86885] transition-colors">Simulador</a>
+          <a href="#localizacao" class="hover:text-[#D86885] transition-colors">Localização</a>
+        </nav>
+      </div>
+
+      <!-- Action Button -->
+      <div class="flex items-center gap-3">
+        <a 
+          href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20consulta%20de%20avalia%C3%A7%C3%A3o%20na%20Cl%C3%ADnica%20Lumina." 
+          target="_blank" 
+          rel="noopener"
+          class="btn-shimmer tactile-btn inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs font-bold tracking-wider uppercase transition-all shadow-md active:scale-[0.96]">
+          <i data-lucide="calendar" class="w-3.5 h-3.5"></i>
+          <span>Agendar Consulta</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+
+  <!-- ======================================================================
+       2. HERO SECTION (Clean Clinical Luxury • Concise Copy)
+       ====================================================================== -->
+  <section class="relative pt-8 pb-16 md:pt-16 md:pb-24 px-4 sm:px-8 z-10">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+        
+        <!-- Left Column: Punchy Editorial Copy -->
+        <div class="lg:col-span-7 space-y-6">
+          
+          <div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#FFF5F7] border border-[#F9D0DC] text-[#8F2B45] text-xs font-mono font-bold uppercase tracking-wider">
+            <i data-lucide="sparkles" class="w-3.5 h-3.5 text-[#D86885]"></i>
+            <span>Dermatologia Médica & Procedimentos Sem Cortes • Jardins, SP</span>
+          </div>
+
+          <h1 class="font-serif text-4xl sm:text-6xl lg:text-6xl font-light text-[#23181C] leading-[1.1] tracking-tight">
+            Sua melhor versão,<br />
+            com a máxima <span class="italic font-normal text-[#D86885] underline decoration-[#F3B0C2] decoration-2 underline-offset-4">segurança médica</span>.
+          </h1>
+
+          <p class="text-base sm:text-lg text-[#6B5B62] leading-relaxed max-w-xl font-normal">
+            Lifting facial sem cortes, rejuvenescimento tridimensional e tecnologias padrão ouro para realçar sua beleza com total naturalidade.
+          </p>
+
+          <!-- CTAs -->
+          <div class="pt-2 flex flex-wrap items-center gap-3.5">
+            <a 
+              href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20na%20Cl%C3%ADnica%20Lumina." 
+              target="_blank" 
+              rel="noopener"
+              class="btn-shimmer tactile-btn min-h-[48px] px-7 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 active:scale-[0.97]">
+              <i data-lucide="message-circle" class="w-4 h-4"></i>
+              <span>Agendar no WhatsApp</span>
+            </a>
+
+            <a 
+              href="#utensilio" 
+              class="btn-secondary-rose tactile-btn min-h-[48px] px-6 py-3 rounded-full text-xs font-bold uppercase tracking-wider transition-all flex items-center gap-2 active:scale-[0.97]">
+              <i data-lucide="zap" class="w-4 h-4 text-[#D86885]"></i>
+              <span>Conhecer os Lasers</span>
+            </a>
+          </div>
+
+          <!-- Quick Metrics (Crisp Clinical Proof) -->
+          <div class="pt-6 border-t border-[#D86885]/15 grid grid-cols-3 gap-6 max-w-md">
+            <div>
+              <span class="block font-serif text-3xl font-bold text-[#D86885] tabular-nums">5.000+</span>
+              <span class="text-xs text-[#6B5B62]">Pacientes atendidas</span>
+            </div>
+            <div>
+              <span class="block font-serif text-3xl font-bold text-[#D86885] tabular-nums">RQE 48k</span>
+              <span class="text-xs text-[#6B5B62]">Dermatologista Titular</span>
+            </div>
+            <div>
+              <span class="block font-serif text-3xl font-bold text-[#D86885] tabular-nums">100%</span>
+              <span class="text-xs text-[#6B5B62]">Médicos Membros SBD</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right Column: Visual Frame with Doctor Authority & rotating badge -->
+        <div class="lg:col-span-5 relative flex justify-center">
+          <div class="relative w-full max-w-md">
+            
+            <!-- Soft Rose Shadow Glow -->
+            <div class="absolute inset-0 bg-[#F9D0DC]/50 rounded-3xl blur-2xl transform rotate-2 scale-105 pointer-events-none"></div>
+
+            <!-- Doctor Authority Image Frame -->
+            <div class="relative rounded-3xl overflow-hidden shadow-xl border-2 border-white aspect-[4/5] bg-white">
+              <img 
+                src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=900&q=85" 
+                alt="Dra. Helena Albuquerque • Dermatologista Chefe da Clínica Lumina" 
+                class="w-full h-full object-cover object-top"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-black/75 via-transparent to-transparent flex flex-col justify-end p-6">
+                <span class="text-xs font-mono uppercase tracking-widest text-[#F9D0DC] font-bold">Corpo Clínico Especializado</span>
+                <h3 class="font-serif text-2xl font-bold text-white">Dra. Helena Albuquerque</h3>
+                <p class="text-xs text-white/80 mt-0.5">CRM/SP 154.210 • RQE 48.912 • Membro Titular SBD</p>
+              </div>
+            </div>
+
+            <!-- Rotating Medical Stamp Badge -->
+            <div class="absolute -bottom-6 -left-6 w-28 h-28 rounded-full bg-white p-1.5 shadow-xl border border-[#F9D0DC] z-20 flex items-center justify-center">
+              <div class="w-full h-full spin-slow flex items-center justify-center">
+                <svg viewBox="0 0 100 100" class="w-full h-full text-[#D86885] fill-current">
+                  <path id="sealPath" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0" fill="transparent"/>
+                  <text font-size="9" font-family="'Space Grotesk', monospace" letter-spacing="2">
+                    <textPath xlink:href="#sealPath">
+                      • EXCELÊNCIA MÉDICA • LUMINA JARDINS
+                    </textPath>
+                  </text>
+                </svg>
+              </div>
+              <div class="absolute inset-0 flex items-center justify-center">
+                <i data-lucide="shield-check" class="w-6 h-6 text-[#D86885]"></i>
+              </div>
+            </div>
+
+            <!-- Google Reviews Floating Pill -->
+            <div class="absolute -top-4 -right-4 bg-white/95 backdrop-blur-md p-3.5 rounded-2xl shadow-lg border border-[#F9D0DC] flex items-center gap-3 z-20">
+              <div class="w-9 h-9 rounded-full bg-[#FFF5F7] text-[#D86885] flex items-center justify-center font-bold text-sm">
+                ★
+              </div>
+              <div>
+                <div class="flex items-center gap-1 text-[#C5A059] text-xs">
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <i data-lucide="star" class="w-3.5 h-3.5 fill-current"></i>
+                  <span class="text-[#23181C] font-bold font-mono ml-1">5.0</span>
+                </div>
+                <span class="text-[11px] font-semibold text-[#23181C] block">Nota Máxima no Google</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================================
+       3. RIBBON MARQUEE (Continuous Clean Medical Technology)
+       ====================================================================== -->
+  <div class="py-3.5 bg-white border-y border-[#D86885]/15 marquee-container">
+    <div class="marquee-content font-mono text-xs font-semibold tracking-wider uppercase text-[#6B5B62]">
+      <span class="flex items-center gap-2 text-[#D86885]">✦ ULTRAFORMER MPT</span>
+      <span class="flex items-center gap-2">★ LASER LAVIEEN THULIUM</span>
+      <span class="flex items-center gap-2 text-[#D86885]">✦ BIOESTIMULADOR RADIESSE</span>
+      <span class="flex items-center gap-2">★ BOTOX ANATÔMICO</span>
+      <span class="flex items-center gap-2 text-[#D86885]">✦ EMSCULPT NEO</span>
+      <span class="flex items-center gap-2">★ GLOSS LIPS HIDRATAÇÃO</span>
+      <span class="flex items-center gap-2 text-[#D86885]">✦ SUÍTE PRIVATIVA FARIA LIMA</span>
+    </div>
+    <div class="marquee-content font-mono text-xs font-semibold tracking-wider uppercase text-[#6B5B62]" aria-hidden="true">
+      <span class="flex items-center gap-2 text-[#D86885]">✦ ULTRAFORMER MPT</span>
+      <span class="flex items-center gap-2">★ LASER LAVIEEN THULIUM</span>
+      <span class="flex items-center gap-2 text-[#D86885]">✦ BIOESTIMULADOR RADIESSE</span>
+      <span class="flex items-center gap-2">★ BOTOX ANATÔMICO</span>
+      <span class="flex items-center gap-2 text-[#D86885]">✦ EMSCULPT NEO</span>
+      <span class="flex items-center gap-2">★ GLOSS LIPS HIDRATAÇÃO</span>
+      <span class="flex items-center gap-2 text-[#D86885]">✦ SUÍTE PRIVATIVA FARIA LIMA</span>
+    </div>
+  </div>
+
+
+  <!-- ======================================================================
+       4. NOVO: ANIMAÇÃO DE UTENSÍLIO MÉDICO & SCANNER A LASER (Handpiece Interativo)
+       ====================================================================== -->
+  <section id="utensilio" class="py-20 px-4 sm:px-8 bg-[#FBF4F6] relative z-10 border-b border-[#D86885]/15">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-2xl mx-auto mb-12 space-y-2">
+        <span class="text-xs font-mono uppercase tracking-widest text-[#D86885] font-bold block">
+          ✦ Tecnologia de Precisão Médica
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-light text-[#23181C]">
+          Simulador do Handpiece a Laser & Ultrassom
+        </h2>
+        <p class="text-xs sm:text-sm text-[#6B5B62]">
+          Mova o cursor para orientar o feixe de energia ou alterne as ponteiras clínicas abaixo.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        
+        <!-- Interactive Wand Sandbox (Left/Center) -->
+        <div class="lg:col-span-8">
+          <div id="wand-interactive-area" class="wand-container cursor-crosshair">
+            
+            <!-- Digital HUD Bar -->
+            <div class="flex items-center justify-between pb-4 mb-4 border-b border-[#D86885]/20 font-mono text-xs">
+              <div class="flex items-center gap-2">
+                <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 animate-pulse"></span>
+                <span class="text-[#8F2B45] font-bold uppercase">Ponteira Ativa:</span>
+                <span id="wand-mode-title" class="text-[#23181C] font-semibold">Ultrassom Microfocado SMAS 4.5mm</span>
+              </div>
+              <div class="flex items-center gap-3">
+                <span class="text-[#6B5B62]">Energia:</span>
+                <span id="wand-energy-val" class="font-bold text-[#D86885] bg-white px-2.5 py-0.5 rounded-md border border-[#F9D0DC]">1.8 J/cm²</span>
+              </div>
+            </div>
+
+            <!-- Stylized Medical Handpiece Wand SVG -->
+            <div class="relative py-8 flex justify-center">
+              <div id="interactive-wand" class="medical-wand">
+                <!-- Wand Body Graphic (SVG) -->
+                <svg viewBox="0 0 200 65" class="w-full h-auto drop-shadow-md">
+                  <defs>
+                    <linearGradient id="wandGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                      <stop offset="0%" stop-color="#FFFFFF" />
+                      <stop offset="50%" stop-color="#FCE8ED" />
+                      <stop offset="100%" stop-color="#D86885" />
+                    </linearGradient>
+                    <linearGradient id="tipGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" stop-color="#E8C982" />
+                      <stop offset="100%" stop-color="#C5A059" />
+                    </linearGradient>
+                  </defs>
+                  
+                  <!-- Main Handpiece Handle -->
+                  <rect x="20" y="18" width="130" height="28" rx="8" fill="url(#wandGrad)" stroke="#D86885" stroke-width="1.5" />
+                  <!-- Grip Ridges -->
+                  <line x1="45" y1="23" x2="45" y2="41" stroke="#D86885" stroke-width="1.5" opacity="0.6" />
+                  <line x1="55" y1="23" x2="55" y2="41" stroke="#D86885" stroke-width="1.5" opacity="0.6" />
+                  <line x1="65" y1="23" x2="65" y2="41" stroke="#D86885" stroke-width="1.5" opacity="0.6" />
+                  <!-- OLED Screen on Wand -->
+                  <rect x="85" y="24" width="45" height="16" rx="3" fill="#23181C" />
+                  <text x="92" y="36" font-family="'Space Grotesk', monospace" font-size="8" fill="#F3B0C2" font-weight="bold">4.5mm</text>
+                  <!-- Transducer Crystal Tip -->
+                  <polygon points="150,22 180,27 180,37 150,42" fill="url(#tipGrad)" stroke="#C5A059" stroke-width="1.5" />
+                  <rect x="180" y="26" width="8" height="12" rx="2" fill="#D86885" />
+                </svg>
+
+                <!-- Active Laser Precision Light Beam -->
+                <div class="laser-beam"></div>
+
+                <!-- Concentric Ultrasound / Laser Ripples -->
+                <div class="pulse-ring"></div>
+                <div class="pulse-ring"></div>
+                <div class="pulse-ring"></div>
+              </div>
+            </div>
+
+            <!-- Skin Scanner Matrix Target -->
+            <div class="skin-scanner-target flex items-center justify-center p-4">
+              <div class="scanner-line"></div>
+              <div class="text-center z-10 space-y-1">
+                <span id="wand-wavelength" class="text-xs font-mono font-bold text-[#8F2B45] block">
+                  Frequência 7.0 MHz • Profundidade SMAS 4.5mm
+                </span>
+                <span class="text-[11px] text-[#6B5B62]">
+                  Estimulação controlada de fibroblastos e neocolagênese ativa
+                </span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Utensil Controls & Mode Selectors (Right) -->
+        <div class="lg:col-span-4 space-y-4">
+          <div class="bg-white p-6 rounded-2xl border border-[#D86885]/20 shadow-sm space-y-4">
+            
+            <h4 class="font-serif text-xl font-bold text-[#23181C]">Selecione a Tecnologia</h4>
+            
+            <!-- Mode Buttons -->
+            <div class="space-y-2">
+              <button 
+                type="button" 
+                data-mode="ultraformer"
+                class="wand-mode-btn w-full p-3 rounded-xl border border-[#D86885]/30 bg-[#D86885] text-white text-xs font-bold uppercase tracking-wider flex items-center justify-between transition-all active:scale-[0.98]">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="activity" class="w-4 h-4"></i>
+                  <span>1. Ultraformer MPT</span>
+                </div>
+                <span class="text-[10px] font-mono opacity-90">Lifting 4.5mm</span>
+              </button>
+
+              <button 
+                type="button" 
+                data-mode="lavieen"
+                class="wand-mode-btn w-full p-3 rounded-xl border border-[#D86885]/20 bg-white text-[#6B5B62] hover:text-[#D86885] text-xs font-bold uppercase tracking-wider flex items-center justify-between transition-all active:scale-[0.98]">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="zap" class="w-4 h-4"></i>
+                  <span>2. Laser Lavieen</span>
+                </div>
+                <span class="text-[10px] font-mono opacity-70">Thulium 1927nm</span>
+              </button>
+
+              <button 
+                type="button" 
+                data-mode="rf"
+                class="wand-mode-btn w-full p-3 rounded-xl border border-[#D86885]/20 bg-white text-[#6B5B62] hover:text-[#D86885] text-xs font-bold uppercase tracking-wider flex items-center justify-between transition-all active:scale-[0.98]">
+                <div class="flex items-center gap-2">
+                  <i data-lucide="sparkles" class="w-4 h-4"></i>
+                  <span>3. Microagulhamento RF</span>
+                </div>
+                <span class="text-[10px] font-mono opacity-70">Ouro 2.0MHz</span>
+              </button>
+            </div>
+
+            <!-- Action Button: Disparar Pulso -->
+            <button 
+              id="wand-pulse-btn"
+              type="button" 
+              class="btn-shimmer tactile-btn w-full py-3.5 rounded-full text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 active:scale-[0.97]">
+              <i data-lucide="zap" class="w-4 h-4"></i>
+              <span>Testar Disparo de Energia</span>
+            </button>
+
+            <span class="block text-center text-[10px] text-[#6B5B62] font-mono">
+              Calibração micrométrica digital e resfriamento criogênico
+            </span>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================================
+       5. DIFERENCIAIS CLÍNICOS (Bento Grid 21st.dev • Enxuto)
+       ====================================================================== -->
+  <section id="diferenciais" class="py-20 px-4 sm:px-8 bg-white relative z-10">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="max-w-2xl mb-12 space-y-2">
+        <span class="text-xs font-mono uppercase tracking-widest text-[#D86885] font-bold block">
+          ✦ O Padrão Lumina
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-light text-[#23181C]">
+          Por que pacientes exigentes escolhem nossa clínica?
+        </h2>
+      </div>
+
+      <!-- Bento Cards -->
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+        
+        <div class="md:col-span-7 spotlight-card p-6 sm:p-8 flex flex-col justify-between space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-[#FFF5F7] text-[#D86885] flex items-center justify-center border border-[#F9D0DC]">
+            <i data-lucide="scan" class="w-5 h-5"></i>
+          </div>
+          <div class="space-y-1.5">
+            <h3 class="font-serif text-2xl font-bold text-[#23181C]">Mapeamento Facial Digital 3D</h3>
+            <p class="text-xs sm:text-sm text-[#6B5B62]">
+              Escaneamento computadorizado para mensurar volume dérmico e camadas de sustentação antes de qualquer procedimento.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-[#D86885]/10 text-xs font-mono text-[#8F2B45] font-semibold">
+            ✓ Previsibilidade e precisão médica
+          </div>
+        </div>
+
+        <div class="md:col-span-5 spotlight-card p-6 sm:p-8 flex flex-col justify-between space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-[#FFF5F7] text-[#D86885] flex items-center justify-center border border-[#F9D0DC]">
+            <i data-lucide="lock" class="w-5 h-5"></i>
+          </div>
+          <div class="space-y-1.5">
+            <h3 class="font-serif text-2xl font-bold text-[#23181C]">Suítes Privativas nos Jardins</h3>
+            <p class="text-xs sm:text-sm text-[#6B5B62]">
+              Atendimento com hora marcada e sala de espera exclusiva. Estacionamento com valet cortesia no local.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-[#D86885]/10 text-xs font-mono text-[#8F2B45] font-semibold">
+            ✓ Total discrição e sigilo médico
+          </div>
+        </div>
+
+        <div class="md:col-span-5 spotlight-card p-6 sm:p-8 flex flex-col justify-between space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-[#FFF5F7] text-[#D86885] flex items-center justify-center border border-[#F9D0DC]">
+            <i data-lucide="award" class="w-5 h-5"></i>
+          </div>
+          <div class="space-y-1.5">
+            <h3 class="font-serif text-2xl font-bold text-[#23181C]">Insumos 100% Originais</h3>
+            <p class="text-xs sm:text-sm text-[#6B5B62]">
+              Trabalhamos exclusivamente com marcas globais (Galderma, Merz, Allergan) com lote e rastreabilidade aberta.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-[#D86885]/10 text-xs font-mono text-[#8F2B45] font-semibold">
+            ✓ Selo de autenticidade em cada frasco
+          </div>
+        </div>
+
+        <div class="md:col-span-7 spotlight-card p-6 sm:p-8 flex flex-col justify-between space-y-4">
+          <div class="w-10 h-10 rounded-xl bg-[#FFF5F7] text-[#D86885] flex items-center justify-center border border-[#F9D0DC]">
+            <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+          </div>
+          <div class="space-y-1.5">
+            <h3 class="font-serif text-2xl font-bold text-[#23181C]">Concierge & Pós-Procedimento 24h</h3>
+            <p class="text-xs sm:text-sm text-[#6B5B62]">
+              Linha direta de acompanhamento com nossa equipe de enfermagem especializada para total tranquilidade.
+            </p>
+          </div>
+          <div class="pt-3 border-t border-[#D86885]/10 text-xs font-mono text-[#8F2B45] font-semibold">
+            ✓ Retorno de avaliação incluso em todo protocolo
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================================
+       6. CATÁLOGO INTERATIVO DE PROCEDIMENTOS (Shadcn Tabs & Cards)
+       ====================================================================== -->
+  <section id="procedimentos" class="py-20 px-4 sm:px-8 bg-[#FCFAF9] relative z-10 border-t border-[#D86885]/15">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+        <div class="space-y-2">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#D86885] font-bold block">
+            ✦ Catálogo de Procedimentos
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-light text-[#23181C]">
+            Protocolos Exclusivos Lumina
+          </h2>
+        </div>
+        <p class="text-xs sm:text-sm text-[#6B5B62] max-w-sm">
+          Selecione a categoria para visualizar indicações, tempo de sessão e agendamento direto.
+        </p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="overflow-x-auto pb-3 mb-8 no-scrollbar">
+        <div id="catalog-tabs" class="flex items-center gap-2.5 min-w-max">
+          <!-- Injected via scripts/app.js -->
+        </div>
+      </div>
+
+      <!-- Procedures Cards Grid -->
+      <div id="catalog-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Injected via scripts/app.js -->
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================================
+       7. SIMULADOR DE PROTOCOLO PERSONALIZADO (Clean Concierge)
+       ====================================================================== -->
+  <section id="simulador" class="py-20 px-4 sm:px-8 bg-white relative z-10 border-y border-[#D86885]/15">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Explanatory Text -->
+        <div class="lg:col-span-5 space-y-4">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#D86885] font-bold block">
+            ✦ Simulador Inteligente
+          </span>
+          <h2 class="font-serif text-3xl sm:text-4xl font-light text-[#23181C] leading-tight">
+            Descubra o protocolo ideal para a sua pele.
+          </h2>
+          <p class="text-xs sm:text-sm text-[#6B5B62] leading-relaxed">
+            Selecione seus objetivos para receber a indicação médica de tecnologias combinadas.
+          </p>
+          <div class="space-y-2 pt-1 text-xs text-[#6B5B62]">
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-[#D86885]"></i>
+              <span>Avaliação médica presencial de confirmação</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check" class="w-4 h-4 text-[#D86885]"></i>
+              <span>Protocolo sob medida sem exageros</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Simulator Interactive Box -->
+        <div class="lg:col-span-7 bg-[#FFF5F7] border border-[#F9D0DC] p-6 sm:p-8 rounded-3xl space-y-5 shadow-sm">
+          
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+            <!-- Question 1: Age -->
+            <div>
+              <label for="sim-age" class="block text-xs font-mono uppercase tracking-wider text-[#8F2B45] mb-1.5 font-bold">
+                Sua Faixa Etária
+              </label>
+              <select id="sim-age" class="w-full bg-white border border-[#D86885]/30 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-[#23181C] focus:outline-none focus:border-[#D86885]">
+                <option value="25-35">25 a 35 anos (Prevenção e Textura)</option>
+                <option value="36-45" selected>36 a 45 anos (Colágeno e Linhas)</option>
+                <option value="46+">46 anos ou mais (Flacidez e Contorno)</option>
+              </select>
+            </div>
+
+            <!-- Question 2: Priority Goal -->
+            <div>
+              <label for="sim-goal" class="block text-xs font-mono uppercase tracking-wider text-[#8F2B45] mb-1.5 font-bold">
+                Objetivo Principal
+              </label>
+              <select id="sim-goal" class="w-full bg-white border border-[#D86885]/30 rounded-xl px-4 py-2.5 text-xs sm:text-sm text-[#23181C] focus:outline-none focus:border-[#D86885]">
+                <option value="lifting" selected>Lifting Facial & Firmeza (Sem Cortes)</option>
+                <option value="prevencao">Suavizar Linhas & Rosto Descansado</option>
+                <option value="manchas">Clarear Manchas & Fechar Poros</option>
+                <option value="contorno">Definição Corporal & Tônus</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Dynamic Result Box -->
+          <div id="sim-result-box" class="p-5 rounded-2xl bg-white border border-[#D86885]/30 space-y-2">
+            <div class="flex items-center justify-between">
+              <span class="text-[11px] font-mono uppercase tracking-wider text-[#D86885] font-bold">Protocolo Recomendado</span>
+              <span class="text-[10px] text-emerald-700 font-mono bg-emerald-50 px-2 py-0.5 rounded-full border border-emerald-200 font-bold">Sem Cortes</span>
+            </div>
+
+            <h3 id="sim-plan-name" class="font-serif text-2xl font-bold text-[#23181C]">
+              Protocolo Lifting Tridimensional
+            </h3>
+
+            <span id="sim-plan-tech" class="text-xs font-mono text-[#D86885] block font-semibold">
+              Ultraformer MPT + Bioestimulador Radiesse
+            </span>
+
+            <p id="sim-plan-desc" class="text-xs text-[#6B5B62]">
+              Estímulo de colágeno e ancoragem muscular profunda para redefinir o contorno sem cortes.
+            </p>
+          </div>
+
+          <!-- Direct CTA to WhatsApp -->
+          <a 
+            id="sim-whatsapp-btn"
+            href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Fiz%20a%20simula%C3%A7%C3%A3o%20no%20site%20e%20gostaria%20de%20agendar%20minha%20avalia%C3%A7%C3%A3o."
+            target="_blank"
+            rel="noopener"
+            class="btn-shimmer tactile-btn w-full py-3.5 rounded-full font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-2 active:scale-[0.97]">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Agendar Avaliação deste Protocolo no WhatsApp</span>
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================================
+       8. DEPOIMENTOS DE PACIENTES (Social Proof Conciso)
+       ====================================================================== -->
+  <section id="depoimentos" class="py-20 px-4 sm:px-8 bg-[#FCFAF9] relative z-10">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="text-center max-w-xl mx-auto mb-12 space-y-2">
+        <span class="text-xs font-mono uppercase tracking-widest text-[#D86885] font-bold block">
+          ✦ Avaliações de Pacientes
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-light text-[#23181C]">
+          A confiança de quem busca naturalidade
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        
+        <!-- Review 1 -->
+        <div class="spotlight-card p-6 flex flex-col justify-between space-y-4 bg-white border border-[#D86885]/15">
+          <div class="space-y-3">
+            <div class="flex items-center gap-1 text-[#C5A059]">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-[#6B5B62] italic leading-relaxed">
+              "Fiz o Ultraformer MPT e o Lavieen. A firmeza da mandíbula e o brilho da pele são impressionantes, e ninguém diz que fiz procedimento. Super natural!"
+            </p>
+          </div>
+          <div class="pt-3 border-t border-[#D86885]/10 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-[#FFF5F7] text-[#D86885] font-bold flex items-center justify-center font-serif text-sm">
+              B
+            </div>
+            <div>
+              <strong class="font-serif text-sm text-[#23181C] block">Beatriz Sanches</strong>
+              <span class="text-[11px] text-[#6B5B62]">Advogada • Jardins</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 2 -->
+        <div class="spotlight-card p-6 flex flex-col justify-between space-y-4 bg-white border border-[#D86885]/15">
+          <div class="space-y-3">
+            <div class="flex items-center gap-1 text-[#C5A059]">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-[#6B5B62] italic leading-relaxed">
+              "Tinha medo de toxina botulínica e ficar paralisada. A Dra. Helena foi impecável: manteve todas as minhas expressões e tirou o ar de cansaço."
+            </p>
+          </div>
+          <div class="pt-3 border-t border-[#D86885]/10 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-[#FFF5F7] text-[#D86885] font-bold flex items-center justify-center font-serif text-sm">
+              C
+            </div>
+            <div>
+              <strong class="font-serif text-sm text-[#23181C] block">Carolina Villela</strong>
+              <span class="text-[11px] text-[#6B5B62]">Empresária • Itaim Bibi</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Review 3 -->
+        <div class="spotlight-card p-6 flex flex-col justify-between space-y-4 bg-white border border-[#D86885]/15">
+          <div class="space-y-3">
+            <div class="flex items-center gap-1 text-[#C5A059]">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-xs sm:text-sm text-[#6B5B62] italic leading-relaxed">
+              "Clínica impecável, com suíte privativa e estacionamento com valet. Equipamentos de ponta e equipe extremamente gentil. Vale cada centavo."
+            </p>
+          </div>
+          <div class="pt-3 border-t border-[#D86885]/10 flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-[#FFF5F7] text-[#D86885] font-bold flex items-center justify-center font-serif text-sm">
+              M
+            </div>
+            <div>
+              <strong class="font-serif text-sm text-[#23181C] block">Mariana Brandão</strong>
+              <span class="text-[11px] text-[#6B5B62]">Arquiteta • Vila Nova Conceição</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================================
+       9. LOCALIZAÇÃO PRIVATIVA & GOOGLE MAPS
+       ====================================================================== -->
+  <section id="localizacao" class="py-20 px-4 sm:px-8 bg-white relative z-10 border-t border-[#D86885]/15">
+    <div class="max-w-7xl mx-auto">
+      
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+        
+        <!-- Left Store Information -->
+        <div class="lg:col-span-5 space-y-5">
+          <span class="text-xs font-mono uppercase tracking-widest text-[#D86885] font-bold block">
+            ✦ Localização Nobre
+          </span>
+
+          <h2 class="font-serif text-3xl sm:text-4xl font-light text-[#23181C] leading-tight">
+            Seu refúgio de cuidado no coração dos Jardins & Faria Lima.
+          </h2>
+
+          <div class="p-5 rounded-2xl bg-[#FFF5F7] border border-[#F9D0DC] space-y-3">
+            <div class="flex items-start gap-3">
+              <i data-lucide="map-pin" class="w-5 h-5 text-[#D86885] flex-shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-xs sm:text-sm text-[#23181C] block font-serif">Av. Brigadeiro Faria Lima, 3477 • 14º Andar</strong>
+                <span class="text-xs text-[#6B5B62]">Itaim Bibi / Jardins • São Paulo — SP (Próximo ao Shopping JK Iguatemi)</span>
+              </div>
+            </div>
+
+            <div class="flex items-start gap-3">
+              <i data-lucide="clock" class="w-5 h-5 text-[#D86885] flex-shrink-0 mt-0.5"></i>
+              <div>
+                <strong class="text-xs sm:text-sm text-[#23181C] block font-serif">Horário de Atendimento</strong>
+                <span class="text-xs text-[#6B5B62] block">Segunda a Sexta: 08h às 20h | Sábados: 09h às 15h</span>
+              </div>
+            </div>
+
+            <div class="flex items-center gap-3 pt-1 text-xs text-[#8F2B45] font-semibold">
+              <span class="inline-flex items-center gap-1 bg-white px-2.5 py-1 rounded-md border border-[#F9D0DC]">
+                <i data-lucide="car" class="w-3.5 h-3.5 text-[#D86885]"></i> Valet Cortesia
+              </span>
+              <span class="inline-flex items-center gap-1 bg-white px-2.5 py-1 rounded-md border border-[#F9D0DC]">
+                <i data-lucide="shield" class="w-3.5 h-3.5 text-[#D86885]"></i> Heliponto no Edifício
+              </span>
+            </div>
+          </div>
+
+          <!-- GPS Links -->
+          <div class="flex flex-wrap gap-3">
+            <a 
+              href="https://maps.google.com/?q=Av.+Brigadeiro+Faria+Lima,+3477+Itaim+Bibi+Sao+Paulo" 
+              target="_blank" 
+              rel="noopener"
+              class="btn-secondary-rose tactile-btn px-5 py-2.5 rounded-full text-xs font-semibold uppercase tracking-wider flex items-center gap-2 active:scale-[0.96]">
+              <i data-lucide="navigation" class="w-3.5 h-3.5"></i>
+              <span>Abrir no Google Maps</span>
+            </a>
+
+            <a 
+              href="https://waze.com/ul?q=Av%20Brigadeiro%20Faria%20Lima%203477%20Sao%20Paulo" 
+              target="_blank" 
+              rel="noopener"
+              class="tactile-btn px-5 py-2.5 rounded-full bg-white text-[#6B5B62] hover:text-[#D86885] border border-[#D86885]/20 text-xs font-semibold uppercase tracking-wider flex items-center gap-2 transition-all active:scale-[0.96]">
+              <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+              <span>Abrir no Waze</span>
+            </a>
+          </div>
+
+        </div>
+
+        <!-- Right Interactive Map Embed Frame -->
+        <div class="lg:col-span-7">
+          <div class="rounded-3xl overflow-hidden border border-[#D86885]/25 shadow-lg h-[380px] relative bg-white">
+            <iframe 
+              title="Localização da Clínica Lumina no Google Maps"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.772591696084!2d-46.68962652377313!3d-23.58557346214307!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce5757d53b92eb%3A0x6b60e6b8c8d20387!2sAv.%20Brigadeiro%20Faria%20Lima%2C%203477%20-%20Itaim%20Bibi%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2004538-133!5e0!3m2!1spt-BR!2sbr!4v1700000000000!5m2!1spt-BR!2sbr" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+            <div class="absolute bottom-3 left-3 bg-white/95 backdrop-blur-md px-3.5 py-1.5 rounded-xl border border-[#D86885]/20 text-xs text-[#23181C] flex items-center gap-2 shadow-sm font-semibold">
+              <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+              <span>Recepção com Valet e Segurança</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================================
+       10. ACCORDION FAQ (Shadcn Mechanics • Enxuto)
+       ====================================================================== -->
+  <section class="py-20 px-4 sm:px-8 bg-[#FCFAF9] relative z-10">
+    <div class="max-w-3xl mx-auto space-y-8">
+      
+      <div class="text-center space-y-2">
+        <span class="text-xs font-mono uppercase tracking-widest text-[#D86885] font-bold block">
+          ✦ Perguntas Frequentes
+        </span>
+        <h2 class="font-serif text-3xl sm:text-4xl font-light text-[#23181C]">
+          Transparência e Clareza
+        </h2>
+      </div>
+
+      <div class="space-y-2">
+        
+        <div class="accordion-item active">
+          <button type="button" class="accordion-trigger">
+            <span>Os procedimentos com Ultraformer e Laser doem?</span>
+            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5"></i>
+          </button>
+          <div class="accordion-content">
+            <p class="text-xs sm:text-sm text-[#6B5B62] leading-relaxed pb-4">
+              Aplicamos anestésico tópico potente e as ponteiras possuem tecnologia de resfriamento criogênico simultâneo, proporcionando uma sessão confortável e muito bem tolerada.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button type="button" class="accordion-trigger">
+            <span>Posso voltar a trabalhar no mesmo dia?</span>
+            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5"></i>
+          </button>
+          <div class="accordion-content">
+            <p class="text-xs sm:text-sm text-[#6B5B62] leading-relaxed pb-4">
+              Sim! Todos os nossos tratamentos são não invasivos e permitem retorno imediato às suas atividades e compromissos.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button type="button" class="accordion-trigger">
+            <span>Qual a diferença entre Bioestimulador e Preenchimento?</span>
+            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5"></i>
+          </button>
+          <div class="accordion-content">
+            <p class="text-xs sm:text-sm text-[#6B5B62] leading-relaxed pb-4">
+              O preenchimento restaura volume pontual imediato (lábios/queixo). O bioestimulador estimula sua própria pele a produzir novo colágeno natural progressivamente, tratando flacidez sem criar volume artificial.
+            </p>
+          </div>
+        </div>
+
+        <div class="accordion-item">
+          <button type="button" class="accordion-trigger">
+            <span>Como agendar a consulta de avaliação inicial?</span>
+            <i data-lucide="chevron-down" class="chevron-icon w-5 h-5"></i>
+          </button>
+          <div class="accordion-content">
+            <p class="text-xs sm:text-sm text-[#6B5B62] leading-relaxed pb-4">
+              Basta clicar em qualquer botão do WhatsApp no site. Nossa equipe concierge responderá prontamente com os melhores horários disponíveis.
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ======================================================================
+       11. GRAND FOOTER (Com Selo Oficial da Agência RIDA)
+       ====================================================================== -->
+  <footer class="bg-white text-[#6B5B62] pt-16 pb-10 px-4 sm:px-8 border-t border-[#D86885]/15 relative z-10">
+    <div class="max-w-7xl mx-auto space-y-12">
+      
+      <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+        
+        <!-- Col 1: Brand Info -->
+        <div class="md:col-span-5 space-y-3">
+          <div class="flex items-center gap-3">
+            <div class="w-9 h-9 rounded-full bg-gradient-to-tr from-[#D86885] to-[#F3B0C2] text-white flex items-center justify-center font-serif text-lg font-bold italic shadow-xs">
+              L
+            </div>
+            <span class="font-serif text-2xl font-bold text-[#23181C] tracking-tight">Clínica Lumina</span>
+          </div>
+          <p class="text-xs sm:text-sm text-[#6B5B62] max-w-sm">
+            Instituto de dermatologia estética avançada e tecnologias não invasivas.
+          </p>
+          <div class="text-[11px] text-[#8F2B45] font-mono">
+            <span>Resp. Técnica: Dra. Helena Albuquerque • CRM/SP 154.210 • RQE 48.912</span>
+          </div>
+        </div>
+
+        <!-- Col 2: Navigation Links -->
+        <div class="md:col-span-3 space-y-2">
+          <h4 class="text-xs font-mono uppercase tracking-widest text-[#D86885] font-bold">Navegação</h4>
+          <ul class="space-y-1.5 text-xs text-[#6B5B62]">
+            <li><a href="#utensilio" class="hover:text-[#D86885] transition-colors">Simulador Handpiece</a></li>
+            <li><a href="#diferenciais" class="hover:text-[#D86885] transition-colors">Diferenciais</a></li>
+            <li><a href="#procedimentos" class="hover:text-[#D86885] transition-colors">Procedimentos</a></li>
+            <li><a href="#simulador" class="hover:text-[#D86885] transition-colors">Simulador</a></li>
+            <li><a href="#localizacao" class="hover:text-[#D86885] transition-colors">Localização</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Direct WhatsApp -->
+        <div class="md:col-span-4 space-y-3">
+          <h4 class="text-xs font-mono uppercase tracking-widest text-[#D86885] font-bold">Atendimento Concierge</h4>
+          <a 
+            href="https://wa.me/5511999998888?text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Concierge%20da%20Cl%C3%ADnica%20Lumina." 
+            target="_blank" 
+            rel="noopener"
+            class="btn-shimmer tactile-btn w-full py-3 px-5 rounded-full text-xs font-bold uppercase tracking-wider flex items-center justify-center gap-2 active:scale-[0.97]">
+            <i data-lucide="message-circle" class="w-4 h-4"></i>
+            <span>Falar no WhatsApp (11) 99999-8888</span>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Watermark Brand Typography -->
+      <div class="border-t border-b border-[#D86885]/10 py-6 text-center select-none overflow-hidden">
+        <span class="font-serif text-5xl sm:text-7xl font-light tracking-widest text-[#F9D0DC]/40 uppercase block">
+          LUMINA
+        </span>
+      </div>
+
+      <!-- Footer Bottom Tag with Agência RIDA Official Badge -->
+      <div class="flex flex-col sm:flex-row items-center justify-between text-xs text-[#6B5B62] gap-4 pt-2">
+        <span>© 2026 Clínica Lumina • Todos os direitos reservados. Informações médicas de caráter educativo.</span>
+        
+        <!-- Agência RIDA Official Custom Plan Attribution -->
+        <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#FFF5F7] border border-[#F9D0DC] text-[#23181C]">
+          <span>Design & Desenvolvimento:</span>
+          <strong class="text-[#D86885] font-bold">Agência RIDA</strong>
+          <span class="text-[#6B5B62]">• Plano Personalizado</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+
+  <!-- ======================================================================
+       12. QUICKVIEW MODAL (Shadcn Dialog Mechanics)
+       ====================================================================== -->
+  <div id="protocol-modal" class="fixed inset-0 bg-black/60 backdrop-blur-sm z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-opacity duration-300">
+    <div class="bg-white border border-[#D86885]/20 w-full max-w-2xl rounded-3xl p-6 sm:p-7 relative shadow-2xl max-h-[90vh] overflow-y-auto">
+      <button 
+        type="button" 
+        onclick="window.lumina.closeModal()" 
+        class="absolute top-4 right-4 p-2 rounded-full bg-[#FFF5F7] hover:bg-[#FDE8ED] text-[#8F2B45] transition-colors"
+        aria-label="Fechar Detalhes">
+        <i data-lucide="x" class="w-5 h-5"></i>
+      </button>
+      <div id="modal-body">
+        <!-- Injected via JavaScript -->
+      </div>
+    </div>
+  </div>
+
+  <style>
+    #protocol-modal.active {
+      opacity: 1;
+      pointer-events: auto;
+    }
+  </style>
+
+  <!-- Toast Notification Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite"></div>
+
+  <!-- Main JavaScript App -->
+  <script type="module" src="scripts/app.js"></script>
+</body>
+</html>

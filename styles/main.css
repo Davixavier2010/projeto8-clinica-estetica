@@ -1,0 +1,432 @@
+/* ==========================================================================
+   CLÍNICA LUMINA • DERMATOLOGIA & ESTÉTICA AVANÇADA
+   Plano Personalizado - Modelo de Alta Conversão Agência RIDA
+   Estilo: Boutique Médica Luxury • Tons de Branco Puro, Rosa Bebê & Champanhe
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap');
+
+:root {
+  /* Paleta Médica de Luxo: Branco Porcelana, Rosa Bebê & Ouro Champanhe */
+  --color-bg: #FCFAF9;
+  --color-bg-alt: #FBF4F6;
+  --color-bg-card: #FFFFFF;
+  --color-surface-hover: #FFF9FA;
+  
+  --color-rose-50: #FFF5F7;
+  --color-rose-100: #FDE8ED;
+  --color-rose-200: #F9D0DC;
+  --color-rose-300: #F3B0C2;
+  --color-rose-primary: #D86885;
+  --color-rose-dark: #8F2B45;
+  --color-rose-glow: rgba(216, 104, 133, 0.18);
+
+  --color-gold: #C5A059;
+  --color-gold-light: #E8C982;
+  --color-gold-dark: #8F6E30;
+  --color-gold-glow: rgba(197, 160, 89, 0.15);
+
+  --color-text-main: #23181C;
+  --color-text-muted: #6B5B62;
+  --color-text-light: #9B8991;
+
+  --color-border: rgba(216, 104, 133, 0.18);
+  --color-border-subtle: rgba(0, 0, 0, 0.06);
+  --color-border-gold: rgba(197, 160, 89, 0.35);
+
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  --font-mono: 'Space Grotesk', monospace;
+
+  --transition-smooth: cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-tactile: cubic-bezier(0.2, 0, 0, 1);
+
+  /* Emil Kowalski Ambient Shadows for Clean Light Surfaces */
+  --shadow-subtle: 0 2px 8px rgba(143, 43, 69, 0.04), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-card: 0 10px 30px -5px rgba(143, 43, 69, 0.07), 0 2px 8px -2px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 20px 40px -10px rgba(143, 43, 69, 0.14), 0 0 20px -2px rgba(216, 104, 133, 0.15);
+}
+
+/* Base Resets */
+html {
+  scroll-behavior: smooth;
+  font-family: var(--font-sans);
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  overflow-x: hidden;
+  background-color: var(--color-bg);
+  color: var(--color-text-main);
+}
+
+::selection {
+  background-color: #F9D0DC;
+  color: #8F2B45;
+}
+
+/* Tabular Numerals (Emil Kowalski Design) */
+.tabular-nums,
+.font-mono,
+[data-price] {
+  font-variant-numeric: tabular-nums lining-nums;
+  font-feature-settings: "tnum" 1, "lnum" 1;
+}
+
+/* Focus Visible */
+:focus-visible {
+  outline: 2px solid var(--color-rose-primary);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+/* Tactile Active Feedback (Emil Kowalski Physics) */
+button, 
+a.btn, 
+.category-tab,
+.interactive-tap {
+  user-select: none;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 0.15s var(--transition-tactile), background-color 0.2s var(--transition-smooth), border-color 0.2s var(--transition-smooth), box-shadow 0.2s var(--transition-smooth);
+}
+
+button:active:not(:disabled), 
+a.btn:active, 
+.category-tab:active {
+  transform: scale(0.975);
+  transition-duration: 0.08s;
+}
+
+/* Floating Island Glass Header - Clean Clinic White */
+.floating-island-nav {
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.92);
+  border: 1px solid rgba(216, 104, 133, 0.2);
+  box-shadow: 0 12px 32px -8px rgba(143, 43, 69, 0.08), 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+/* Spotlight Card (Light Rose / White Luxury) */
+.spotlight-card {
+  position: relative;
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 1.5rem;
+  overflow: hidden;
+  transition: transform 0.35s var(--transition-smooth), border-color 0.35s var(--transition-smooth), box-shadow 0.35s var(--transition-smooth);
+  box-shadow: var(--shadow-card);
+}
+
+.spotlight-card::before {
+  content: '';
+  position: absolute;
+  top: var(--mouse-y, -1000px);
+  left: var(--mouse-x, -1000px);
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(243, 176, 194, 0.35) 0%, transparent 70%);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+}
+
+.spotlight-card:hover::before {
+  opacity: 1;
+}
+
+.spotlight-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(216, 104, 133, 0.45);
+  box-shadow: var(--shadow-card-hover);
+}
+
+/* Shimmer Button (Rose Gold & Soft Rose Gleam) */
+.btn-shimmer {
+  position: relative;
+  background: linear-gradient(135deg, #D86885 0%, #E88BA2 50%, #C75773 100%);
+  color: #FFFFFF;
+  font-weight: 600;
+  overflow: hidden;
+  box-shadow: 0 8px 24px -4px rgba(216, 104, 133, 0.45);
+}
+
+.btn-shimmer::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    60deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.5) 40%,
+    transparent 60%
+  );
+  transform: rotate(30deg) translateY(-100%);
+  animation: shimmerGleam 4s infinite;
+}
+
+@keyframes shimmerGleam {
+  0% { transform: rotate(30deg) translateY(-120%); }
+  25% { transform: rotate(30deg) translateY(120%); }
+  100% { transform: rotate(30deg) translateY(120%); }
+}
+
+/* Secondary Button (Crisp White + Rose Border) */
+.btn-secondary-rose {
+  background-color: #FFFFFF;
+  color: var(--color-rose-dark);
+  border: 1.5px solid var(--color-rose-300);
+  box-shadow: 0 4px 12px rgba(216, 104, 133, 0.1);
+  transition: all 0.25s var(--transition-smooth);
+}
+.btn-secondary-rose:hover {
+  background-color: var(--color-rose-50);
+  border-color: var(--color-rose-primary);
+  color: var(--color-rose-primary);
+}
+
+/* Rotating Seal Badge */
+.spin-slow {
+  animation: spinSlow 30s linear infinite;
+}
+.spin-slow:hover {
+  animation-play-state: paused;
+}
+@keyframes spinSlow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Infinite Marquee */
+.marquee-container {
+  overflow: hidden;
+  white-space: nowrap;
+  display: flex;
+  user-select: none;
+  background-color: #FFFFFF;
+  border-top: 1px solid rgba(216, 104, 133, 0.15);
+  border-bottom: 1px solid rgba(216, 104, 133, 0.15);
+}
+.marquee-content {
+  display: flex;
+  flex-shrink: 0;
+  gap: 2.5rem;
+  animation: scrollMarquee 35s linear infinite;
+}
+.marquee-container:hover .marquee-content {
+  animation-play-state: paused;
+}
+@keyframes scrollMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-100%); }
+}
+
+/* Accordion */
+.accordion-item {
+  border: 1px solid rgba(216, 104, 133, 0.18);
+  background-color: #FFFFFF;
+  border-radius: 1rem;
+  padding: 0 1.5rem;
+  margin-bottom: 0.75rem;
+  box-shadow: 0 2px 6px rgba(143, 43, 69, 0.03);
+}
+.accordion-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 0;
+  text-align: left;
+  font-family: var(--font-sans);
+  font-size: 1.02rem;
+  font-weight: 600;
+  color: var(--color-text-main);
+  transition: color 0.2s;
+}
+.accordion-trigger:hover {
+  color: var(--color-rose-primary);
+}
+.accordion-trigger .chevron-icon {
+  transition: transform 0.3s var(--transition-smooth);
+  color: var(--color-rose-primary);
+}
+.accordion-item.active .accordion-trigger .chevron-icon {
+  transform: rotate(180deg);
+}
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s var(--transition-smooth), opacity 0.3s ease;
+  opacity: 0;
+}
+.accordion-item.active .accordion-content {
+  max-height: 300px;
+  opacity: 1;
+}
+
+/* Ambient Radial Glows (Soft Rose & Champagne) */
+.ambient-glow-rose {
+  position: absolute;
+  width: 38rem;
+  height: 38rem;
+  background: radial-gradient(circle, rgba(253, 224, 232, 0.75) 0%, rgba(255, 245, 247, 0.3) 50%, transparent 75%);
+  filter: blur(50px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.ambient-glow-gold {
+  position: absolute;
+  width: 32rem;
+  height: 32rem;
+  background: radial-gradient(circle, rgba(247, 235, 214, 0.6) 0%, transparent 70%);
+  filter: blur(55px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ==========================================================================
+   DYNAMIC MEDICAL UTENSIL ANIMATION (Handpiece Laser & Ultrasonic Scanner)
+   ========================================================================== */
+.wand-container {
+  position: relative;
+  width: 100%;
+  background: radial-gradient(circle at 50% 30%, #FFFFFF 0%, #FFF5F7 60%, #FDE8ED 100%);
+  border: 1px solid rgba(216, 104, 133, 0.25);
+  border-radius: 2rem;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 16px 40px -10px rgba(143, 43, 69, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+  overflow: hidden;
+}
+
+/* Animated Medical Laser Handpiece Wand */
+.medical-wand {
+  position: relative;
+  width: 200px;
+  margin: 0 auto;
+  transition: transform 0.4s var(--transition-smooth);
+  filter: drop-shadow(0 12px 20px rgba(216, 104, 133, 0.25));
+}
+
+/* Laser Precision Light Beam */
+.laser-beam {
+  position: absolute;
+  left: 50%;
+  top: 90%;
+  width: 4px;
+  height: 120px;
+  background: linear-gradient(180deg, #D86885 0%, #FFB6C1 40%, rgba(216, 104, 133, 0) 100%);
+  transform: translateX(-50%);
+  transform-origin: top center;
+  box-shadow: 0 0 16px #D86885, 0 0 30px #FF8DA6;
+  animation: laserPulse 1.8s infinite alternate ease-in-out;
+}
+
+@keyframes laserPulse {
+  0% { opacity: 0.6; height: 100px; width: 3px; }
+  50% { opacity: 1; height: 140px; width: 5px; }
+  100% { opacity: 0.7; height: 110px; width: 3px; }
+}
+
+/* Concentric Pulse Energy Rings */
+.pulse-ring {
+  position: absolute;
+  left: 50%;
+  bottom: 15px;
+  width: 80px;
+  height: 25px;
+  border: 2px solid #D86885;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  opacity: 0;
+  animation: rippleWave 2.4s infinite cubic-bezier(0.2, 0.8, 0.4, 1);
+}
+.pulse-ring:nth-child(2) {
+  animation-delay: 0.8s;
+}
+.pulse-ring:nth-child(3) {
+  animation-delay: 1.6s;
+}
+
+@keyframes rippleWave {
+  0% { transform: translateX(-50%) scale(0.3); opacity: 0.9; }
+  80% { transform: translateX(-50%) scale(2.4); opacity: 0; }
+  100% { transform: translateX(-50%) scale(2.6); opacity: 0; }
+}
+
+/* Skin Grid Scanner Canvas */
+.skin-scanner-target {
+  position: relative;
+  background: #FFFFFF;
+  border: 1px dashed rgba(216, 104, 133, 0.35);
+  border-radius: 1.25rem;
+  height: 110px;
+  margin-top: 1rem;
+  overflow: hidden;
+  box-shadow: inset 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.scanner-line {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #D86885 50%, transparent 100%);
+  box-shadow: 0 0 12px #D86885;
+  animation: scanVertical 3s ease-in-out infinite;
+}
+
+@keyframes scanVertical {
+  0% { top: 5%; opacity: 0.3; }
+  50% { top: 90%; opacity: 1; }
+  100% { top: 5%; opacity: 0.3; }
+}
+
+/* Category Tab Pill Active */
+.category-tab.active {
+  background-color: var(--color-rose-primary) !important;
+  color: #FFFFFF !important;
+  border-color: var(--color-rose-primary) !important;
+  box-shadow: 0 6px 16px rgba(216, 104, 133, 0.35) !important;
+}
+
+/* Toast Container */
+.toast-container {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 120;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  pointer-events: none;
+}
+.toast-item {
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.85rem 1.35rem;
+  background-color: #FFFFFF;
+  color: var(--color-text-main);
+  border: 1px solid var(--color-rose-300);
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  box-shadow: 0 12px 30px rgba(143, 43, 69, 0.12);
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.35s var(--transition-smooth);
+}
+.toast-item.show {
+  transform: translateY(0);
+  opacity: 1;
+}
